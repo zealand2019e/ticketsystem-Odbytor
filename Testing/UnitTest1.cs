@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TicketLibrary;
-using System.Timers;
+using CompanyLibrary;
 
 namespace Testing
 {
@@ -142,14 +142,80 @@ namespace Testing
             //Act
             //Dunno how to change DateTime.Now so i recommend changing the time on PC.
             //Assert
-            Assert.AreEqual(182.4,tcar.Price(false));
+            Assert.AreEqual(228, tcar.Price(true), 0.01);
         }
 
+        /// <summary>
+        /// Test if the price is ok.
+        /// </summary>
+        [TestMethod]
+        public void TestNewLibraryMC()
+        {
+            double price = 0;
+            eMC teMC = new eMC();
 
+            Assert.AreEqual(210, teMC.Price(false));
+        }
 
+        /// <summary>
+        /// Test if the price is ok.
+        /// </summary>
+        [TestMethod]
+        public void TestNewLibraryCar()
+        {
+            double price = 0;
+            eCar teCar = new eCar();
 
+            Assert.AreEqual(410, teCar.Price(false));
+        }
 
+        /// <summary>
+        /// Test if the price is ok after discount.
+        /// </summary>
+        [TestMethod]
+        public void TestNewLibraryMCD()
+        {
+            double price = 0;
+            eMC teMC = new eMC();
 
+            Assert.AreEqual(73, teMC.Price(true));
+        }
 
+        /// <summary>
+        /// Test if the price is ok after discount.
+        /// </summary>
+        [TestMethod]
+        public void TestNewLibraryCarD()
+        {
+            double price = 0;
+            eCar teCar = new eCar();
+
+            Assert.AreEqual(161, teCar.Price(true));
+        }
+
+        /// <summary>
+        /// Test the type.
+        /// </summary>
+        [TestMethod]
+        public void TestNewLibraryTypeMC()
+        {
+            //Arrange
+            eMC teMC = new eMC();
+            //Assert
+            Assert.AreEqual( "Oresund MC", teMC.VehicleType());
+        }
+
+        /// <summary>
+        /// Test the type.
+        /// </summary>
+        [TestMethod]
+        public void TestNewLibraryTypeCar()
+        {
+            //Arrange
+            eCar teCar = new eCar();
+            //Assert
+            Assert.AreEqual("Oresund Car", teCar.VehicleType());
+
+        }
     }
 }

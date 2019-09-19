@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicketLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:TicketLibrary.Car">
+            <summary>
+            A class of car.
+            </summary>
+        </member>
+        <member name="M:TicketLibrary.Vehicle.Price(System.Boolean)">
+            <summary>
+            Returns a price of a car.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TicketLibrary.Vehicle.VehicleType">
+            <summary>
+            Return a type of a car.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
