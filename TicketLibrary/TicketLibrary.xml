@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicketLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:TicketLibrary.Car">
+            <summary>
+            A class of car.
+            </summary>
+        </member>
+        <member name="M:TicketLibrary.Car.Price(System.Boolean)">
+            <summary>
+            If it is sunday and customer has BroBiz then both discount are applied.
+            </summary>
+            <param name="BroBiz"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TicketLibrary.MC.Price(System.Boolean)">
+            <summary>
+            If BroBiz is true then discount is being applied.
+            </summary>
+            <param name="BroBiz"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TicketLibrary.Vehicle.Licenseplate">
+            <summary>
+            Setter checks if length of Licensplate number is not more then 7.
+            </summary>
+        </member>
+        <member name="M:TicketLibrary.Vehicle.Price(System.Boolean)">
+            <summary>
+            Returns a price of a car.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TicketLibrary.Vehicle.VehicleType">
+            <summary>
+            Return a type of a car.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

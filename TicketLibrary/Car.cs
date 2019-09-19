@@ -11,14 +11,27 @@ namespace TicketLibrary
     {
         public override string Licenseplate { get => base.Licenseplate; set => base.Licenseplate = value; }
         public override DateTime Date { get; set; }
-
+        /// <summary>
+        /// If it is sunday and customer has BroBiz then both discount are applied.
+        /// </summary>
+        /// <param name="BroBiz"></param>
+        /// <returns></returns>
         public override double Price(bool BroBiz)
         {
-            if (BroBiz == true)
+            if(DateTime.Now.DayOfWeek.Equals(DayOfWeek.Saturday) || DateTime.Now.DayOfWeek.Equals(DayOfWeek.Sunday))
             {
-                return 240 * 0.95;
+                if (BroBiz == true)
+                {
+                    return 240 * 0.8 * 0.95;
+                }
+                else
+                    return 240 * 0.8;    
             }
-            else
+                else if(BroBiz == true)
+                {
+                return 240 * 0.95;
+                }
+                else
                 return 240;
         }
 

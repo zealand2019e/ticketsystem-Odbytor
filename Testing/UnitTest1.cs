@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TicketLibrary;
+using System.Timers;
 
 namespace Testing
 {
@@ -129,5 +130,26 @@ namespace Testing
             //Assert
             Assert.AreEqual(price, 118.75);
         }
+
+        /// <summary>
+        /// Checks if discounts are applied correctly.
+        /// </summary>
+        [TestMethod]
+        public void TestStorebaltsbroenDiscount()
+        {
+            //Arrange
+            Car tcar = new Car();
+            //Act
+            //Dunno how to change DateTime.Now so i recommend changing the time on PC.
+            //Assert
+            Assert.AreEqual(182.4,tcar.Price(false));
+        }
+
+
+
+
+
+
+
     }
 }

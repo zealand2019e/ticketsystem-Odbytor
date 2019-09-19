@@ -8,7 +8,11 @@ namespace TicketLibrary
     {
         public override string Licenseplate { get => base.Licenseplate; set => base.Licenseplate = value; }
         public override DateTime Date { get; set; }
-
+        /// <summary>
+        /// If BroBiz is true then discount is being applied.
+        /// </summary>
+        /// <param name="BroBiz"></param>
+        /// <returns></returns>
         public override double Price(bool BroBiz)
         {
             if(BroBiz == true)

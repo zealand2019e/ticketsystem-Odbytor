@@ -8,6 +8,9 @@ namespace TicketLibrary
     {
 
         string _licensplate;
+        /// <summary>
+        /// Setter checks if length of Licensplate number is not more then 7.
+        /// </summary>
         public virtual string Licenseplate
         {
             get { return _licensplate; }
