@@ -6,6 +6,7 @@ namespace TicketLibrary
 {
     public abstract class Vehicle
     {
+
         string _licensplate;
         public virtual string Licenseplate
         {
@@ -26,7 +27,7 @@ namespace TicketLibrary
         /// Returns a price of a car.
         /// </summary>
         /// <returns></returns>
-        public abstract double Price();
+        public abstract double Price(bool BroBiz);
         /// <summary>
         /// Return a type of a car.
         /// </summary>

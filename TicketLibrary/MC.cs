@@ -9,8 +9,13 @@ namespace TicketLibrary
         public override string Licenseplate { get => base.Licenseplate; set => base.Licenseplate = value; }
         public override DateTime Date { get; set; }
 
-        public override double Price()
+        public override double Price(bool BroBiz)
         {
+            if(BroBiz == true)
+            {
+                return 125 * 0.95;
+            }
+            else
             return 125;
         }
 
