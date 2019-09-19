@@ -7,25 +7,17 @@ namespace TicketLibrary
     /// <summary>
     /// A class of car.
     /// </summary>
-    public class Car
+    public class Car: Vehicle
     {
-        public string Licenseplate { get; set; }
-        public DateTime Date { get; set; }
+        public override string Licenseplate { get => base.Licenseplate; set => base.Licenseplate = value; }
+        public override DateTime Date { get; set; }
 
-        /// <summary>
-        /// Returns a price of a car.
-        /// </summary>
-        /// <returns></returns>
-        public double Price()
+        public override double Price()
         {
             return 240;
         }
 
-        /// <summary>
-        /// Return a type of a car.
-        /// </summary>
-        /// <returns></returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }

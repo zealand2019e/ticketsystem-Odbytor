@@ -4,17 +4,17 @@ using System.Text;
 
 namespace TicketLibrary
 {
-   public class MC
+   public class MC: Vehicle
     {
-        public string Licensplate { get; set; }
-        public DateTime date { get; set; }
+        public override string Licenseplate { get => base.Licenseplate; set => base.Licenseplate = value; }
+        public override DateTime Date { get; set; }
 
-        public double Price()
+        public override double Price()
         {
             return 125;
         }
 
-        public string Vehicle()
+        public override string VehicleType()
         {
             return "MC";
         }

@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TicketLibrary;
 
 namespace Testing
@@ -62,9 +63,37 @@ namespace Testing
             string type;
             MC tcar = new MC();
             //Act
-            type = tcar.Vehicle();
+            type = tcar.VehicleType();
             //Assert
             Assert.AreEqual(type, "MC");
         }
+
+        [TestMethod]
+        //[ExpectedException(typeof(ArgumentException), 
+        //    "You need to enter Licensplate with maximum 7 numbers.")]
+        public void TestLicensePlateCarLength()
+        {
+            void Test()
+            {
+                Car tcar = new Car();
+                tcar.Licenseplate = "JFGSDFSDG";
+            }
+            //Assert
+            Assert.ThrowsException<ArgumentOutOfRangeException>(Test);
+        }
+
+        [TestMethod]
+        public void TestLicensePlateMCLength()
+        {
+            void Test()
+            {
+                MC tmc = new MC();
+                tmc.Licenseplate = "JFG45GDFGF";
+            }
+            //Assert
+            Assert.ThrowsException<ArgumentOutOfRangeException>(Test);
+        }
+
+
     }
 }
