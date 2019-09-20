@@ -18,7 +18,7 @@ namespace TicketLibrary
         /// <returns></returns>
         public override double Price(bool BroBiz)
         {
-            if(DateTime.Now.DayOfWeek.Equals(DayOfWeek.Saturday) || DateTime.Now.DayOfWeek.Equals(DayOfWeek.Sunday))
+            if(Date.DayOfWeek.Equals(DayOfWeek.Saturday) || Date.DayOfWeek.Equals(DayOfWeek.Sunday))//date of the vehicle entering the place instead of datetime now
             {
                 if (BroBiz == true)
                 {
