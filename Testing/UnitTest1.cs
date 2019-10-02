@@ -145,6 +145,15 @@ namespace Testing
             Assert.AreEqual(228, tcar.Price(true), 0.01);
         }
 
+        [TestMethod]
+        public void CheckTimeSunday()
+        {
+            Car tcar = new Car();
+            tcar.Date = new DateTime(2019, 09, 29);
+            double Price = tcar.Price(true);
+            Assert.AreEqual(182.4, Price, 0.1);
+        }
+
         /// <summary>
         /// Test if the price is ok.
         /// </summary>

@@ -6,6 +6,7 @@ namespace TicketLibrary
 {
     public abstract class Vehicle
     {
+        
 
         string _licensplate;
         /// <summary>
